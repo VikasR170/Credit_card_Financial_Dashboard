@@ -33,7 +33,7 @@ The project covers:
 
 The project uses two main datasets:
 
-### Customer Data
+ Customer Data
 
 Contains customer demographic and behavioral information such as:
 
@@ -79,17 +79,15 @@ cc_details[Client_Num]
 
 This relationship allows customer-level information to be analyzed together with credit card transactions.
 
----
-
-# 📊 Dashboard
+ 📊 Dashboard
 
 The Power BI report consists of two main analytical views:
 
-## 1. Credit Card Transaction Report
+ 1. Credit Card Transaction Report
 
 This dashboard focuses on overall credit card performance.
 
-### Key KPIs
+Key KPIs
 
 * Total Revenue: **56.52M**
 * Total Interest: **7.98M**
@@ -98,7 +96,7 @@ This dashboard focuses on overall credit card performance.
 * Total Customers: **10K**
 * Average Credit Limit: **8.64K**
 
-### Analysis Includes
+Analysis Includes
 
 * Revenue by Card Category
 * Revenue by Payment Method
@@ -109,11 +107,11 @@ This dashboard focuses on overall credit card performance.
 
 ---
 
-## 2. Credit Card Customer Report
+ 2. Credit Card Customer Report
 
 This dashboard focuses on customer demographics and behavior.
 
-### Analysis Includes
+ Analysis Includes
 
 * Revenue by Age Group
 * Revenue by Income Group
@@ -124,15 +122,15 @@ This dashboard focuses on customer demographics and behavior.
 * Revenue by Gender
 * Weekly Revenue Trends
 
----
 
-# ⚠️ Credit Card Risk Analysis
+
+ ⚠️ Credit Card Risk Analysis
 
 A key part of the project is analyzing customer delinquency.
 
 Yes. Since these are part of the actual Power BI work, they should be included in the **DAX Measures & Calculated Columns** section of your README. I'd update that section professionally like this:
 
-````markdown
+markdown
 📐 DAX Calculations
 
 The project uses DAX to create calculated columns and measures for customer segmentation, revenue analysis, and delinquency analysis.
@@ -180,12 +178,11 @@ SWITCH(
     "Unknown"
 )
 
+Income Segments
 
-### Income Segments
-
-* **Low:** < 35,000
-* **Medium:** 35,000–69,999
-* **High:** ≥ 70,000
+Low:< 35,000
+Medium: 35,000–69,999
+High: ≥ 70,000
 
 
  3. Revenue
@@ -244,25 +241,25 @@ DIVIDE(
 The delinquency rate was used to identify potentially higher-risk customer segments by **Age Group** and **Card Category**.
 
 
-# 🔍 Key Business Insights
+ 🔍 Key Business Insights
 
-### 💳 1. Card Category Performance
+💳 1. Card Category Performance
 
 Blue card customers contribute approximately **83% of total revenue**, making Blue the dominant revenue-generating card category.
 
-### 📅 2. Quarterly Performance
+ 📅 2. Quarterly Performance
 
-**Q4 recorded the highest revenue and transaction volume**, indicating stronger customer spending activity toward the end of the year.
+Q4 recorded the highest revenue and transaction volume**, indicating stronger customer spending activity toward the end of the year.
 
-### 💰 3. Expenditure Behavior
+💰 3. Expenditure Behavior
 
-**Bills** represent the highest-revenue expenditure category, followed by Entertainment and Fuel.
+Bills represent the highest-revenue expenditure category, followed by Entertainment and Fuel.
 
-### 👔 4. Customer Segmentation
+👔 4. Customer Segmentation
 
-**Business customers** are among the highest revenue-generating occupational segments, making them an important target for retention and personalized offers.
+Business customers are among the highest revenue-generating occupational segments, making them an important target for retention and personalized offers.
 
-### ⚠️ 5. Delinquency Risk
+ ⚠️ 5. Delinquency Risk
 
 The overall delinquency rate is approximately **6%**.
 
@@ -270,37 +267,34 @@ The **40–50 age group with Platinum cards recorded a 15% delinquency rate**, i
 
 The **60+ age group with Gold cards recorded a 13% delinquency rate**, representing another segment that may require closer monitoring.
 
-### 💳 6. Payment Method
+ 💳 6. Payment Method
 
-**Swipe transactions generate the highest revenue**, while online transactions contribute a comparatively smaller share, indicating an opportunity to increase digital payment adoption.
+Swipe transactions generate the highest revenue**, while online transactions contribute a comparatively smaller share, indicating an opportunity to increase digital payment adoption.
 
-### ⭐ 7. Customer Satisfaction
+ ⭐ 7. Customer Satisfaction
 
 The average customer satisfaction score is approximately **3.19/5**, indicating moderate satisfaction and potential opportunities to improve customer experience.
 
----
-
-# 💡 Business Recommendations
+💡 Business Recommendations
 
 Based on the analysis:
 
-1. **Strengthen retention strategies** for Blue card customers due to their significant contribution to revenue.
+1. Strengthen retention strategies** for Blue card customers due to their significant contribution to revenue.
 
-2. **Target high-value customer segments**, particularly business customers and customers aged 40–50.
+2. Target high-value customer segments**, particularly business customers and customers aged 40–50.
 
-3. **Monitor high-risk segments**, especially 40–50-year-old Platinum card customers and 60+ Gold card customers.
+3. Monitor high-risk segments**, especially 40–50-year-old Platinum card customers and 60+ Gold card customers.
 
-4. **Encourage digital payment adoption** through online transaction rewards and targeted promotions.
+4. Encourage digital payment adoption** through online transaction rewards and targeted promotions.
 
-5. **Leverage Q4 spending trends** by introducing seasonal campaigns during high-activity periods.
+5. Leverage Q4 spending trends** by introducing seasonal campaigns during high-activity periods.
 
-6. **Analyze customer satisfaction drivers** to identify areas for improving customer experience.
+6. Analyze customer satisfaction drivers** to identify areas for improving customer experience.
 
----
 
-# 📁 Project Structure
+📁 Project Structure
 
-```text
+text
 Credit_card_Financial_Dashboard/
 │
 ├── 📂 datasets/
@@ -315,13 +309,11 @@ Credit_card_Financial_Dashboard/
 ├── 📄 Financial Dashboard Data.sql
 ├── 📄 Weekly Insight Report.docx
 └── 📄 README.md
-```
 
----
 
-# 🔄 Project Workflow
+ 🔄 Project Workflow
 
-```text
+text
 Raw Data
    ↓
 Data Understanding
@@ -341,11 +333,9 @@ Interactive Dashboard
 Business Insights
    ↓
 Recommendations
-```
 
----
 
-# 🎯 Skills Demonstrated
+🎯 Skills Demonstrated
 
 * SQL
 * Power BI
@@ -360,31 +350,29 @@ Recommendations
 * Business Intelligence
 * Business Insight Generation
 
----
 
-# 📸 Dashboard Preview
+ 📸 Dashboard Preview
 
-### Credit Card Transaction Report
+ 📸 Dashboard Preview
 
-![Credit Card Transaction Report](./image/credit-card-transaction-report.png)
+Credit Card Transaction Report
 
-### Credit Card Customer Report
+![Credit Card Transaction Report](./image/Credit_Card_Transaction_Report.png)
 
-![Credit Card Customer Report](./image/credit-card-customer-report.png)
----
+Credit Card Customer Report
 
-# 👨‍💻 Author
+![Credit Card Customer Report](./image/Credit_Card_Customer_Report.png)
 
-**Vikas Rajbhar**
+👨‍💻 Author
+
+Vikas Rajbhar
 
 B.Sc. Computer Science Graduate | Aspiring Data Analyst
 
-**Core Skills:**
+Core Skills:
 `SQL` `Power BI` `DAX` `Excel` `Python` `Pandas` `Data Analytics`
 
----
-
-## ⭐ Project Highlights
+⭐ Project Highlights
 
 This project demonstrates an end-to-end approach to data analytics — from **raw data and SQL analysis to Power BI visualization and actionable business recommendations**.
 
