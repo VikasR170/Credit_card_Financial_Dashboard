@@ -355,7 +355,7 @@ Recommendations
 
 Credit Card Transaction Report
 
-![Credit Card Transaction Report](image/credit_card_cransaction_report.png)
+![Credit Card Transaction Report](image/credit_card_transaction_report.png)
 
 Credit Card Customer Report
 
