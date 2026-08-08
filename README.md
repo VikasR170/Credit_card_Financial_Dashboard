@@ -353,16 +353,15 @@ Recommendations
 
  📸 Dashboard Preview
 
- 📸 Dashboard Preview
-
 Credit Card Transaction Report
 
-![Credit Card Transaction Report](./image/Credit_Card_Transaction_Report.png)
+![Credit Card Transaction Report](image/Credit_Card_Transaction_Report.png)
 
 Credit Card Customer Report
 
-![Credit Card Customer Report](./image/Credit_Card_Customer_Report.png)
+![Credit Card Customer Report](image/Credit_Card_Customer_Report.png)
 
+---
 👨‍💻 Author
 
 Vikas Rajbhar
@@ -370,7 +369,7 @@ Vikas Rajbhar
 B.Sc. Computer Science Graduate | Aspiring Data Analyst
 
 Core Skills:
-`SQL` `Power BI` `DAX` `Excel` `Python` `Pandas` `Data Analytics`
+SQL |Power BI| DAX | Excel | Python | Pandas | Data Analytics |
 
 ⭐ Project Highlights
 
