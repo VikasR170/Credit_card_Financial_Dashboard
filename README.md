@@ -355,13 +355,13 @@ Recommendations
 
 Credit Card Transaction Report
 
-![Credit Card Transaction Report](image/Credit_Card_Transaction_Report.png)
+![Credit Card Transaction Report](image/credit_card_cransaction_report.png)
 
 Credit Card Customer Report
 
-![Credit Card Customer Report](image/Credit_Card_Customer_Report.png)
+![Credit Card Customer Report](image/credit_card_customer_report.png)
 
----
+
 👨‍💻 Author
 
 Vikas Rajbhar
