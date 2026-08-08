@@ -1,14 +1,8 @@
 
 ````markdown
-# 💳 Credit Card Financial Dashboard
+💳 Credit Card Financial Dashboard
 
-## 📊 Data Analytics Project | SQL Server + Power BI
-
-An end-to-end data analytics project that analyzes credit card transactions and customer information to uncover insights into revenue, customer behavior, transaction trends, card performance, and delinquency risk.
-
----
-
-## 📌 Project Overview
+ 📌 Project Overview
 
 The objective of this project is to transform raw credit card and customer data into an interactive Power BI dashboard that helps identify key business trends and customer segments.
 
@@ -23,9 +17,8 @@ The project covers:
 - Delinquency and risk analysis
 - Business recommendations
 
----
 
-## 🛠️ Tools & Technologies
+ 🛠️ Tools & Technologies
 
 | Tool | Purpose |
 |---|---|
@@ -35,9 +28,8 @@ The project covers:
 | **Power Query** | Data transformation |
 | **Excel / CSV** | Source data |
 
----
 
-## 🗂️ Dataset
+ 🗂️ Dataset
 
 The project uses two main datasets:
 
@@ -55,7 +47,7 @@ Contains customer demographic and behavioral information such as:
 - Dependents
 - Customer Satisfaction Score
 
-### Credit Card Data
+ Credit Card Data
 
 Contains credit card and transaction information such as:
 
@@ -72,19 +64,18 @@ Contains credit card and transaction information such as:
 
 The datasets are available in the [`datasets`](./datasets) folder.
 
----
 
-## 🔗 Data Model
+ 🔗 Data Model
 
 The two tables are connected using the customer identifier:
 
-```text
+text
 cust_detail[Client_Num]
         │
         │  1 : *
         ▼
 cc_details[Client_Num]
-````
+
 
 This relationship allows customer-level information to be analyzed together with credit card transactions.
 
@@ -142,15 +133,15 @@ A key part of the project is analyzing customer delinquency.
 Yes. Since these are part of the actual Power BI work, they should be included in the **DAX Measures & Calculated Columns** section of your README. I'd update that section professionally like this:
 
 ````markdown
-# 📐 DAX Calculations
+📐 DAX Calculations
 
 The project uses DAX to create calculated columns and measures for customer segmentation, revenue analysis, and delinquency analysis.
 
-## 1. Age Group
+ 1. Age Group
 
 A calculated column was created to segment customers based on age:
 
-```DAX
+DAX
 AgeGroup =
 SWITCH(
     TRUE(),
@@ -164,9 +155,8 @@ SWITCH(
     cust_detail[Customer_Age] >= 60, "60+",
     "Unknown"
 )
-````
 
-### Age Groups
+Age Groups
 
 * 20–30
 * 30–40
@@ -174,13 +164,12 @@ SWITCH(
 * 50–60
 * 60+
 
----
 
-## 2. Income Group
+2. Income Group
 
 Customers were segmented into income groups to compare revenue and customer behavior across different income levels.
 
-```DAX
+DAX
 Income Group =
 SWITCH(
     TRUE(),
@@ -190,7 +179,7 @@ SWITCH(
     cust_detail[Income] >= 70000, "High",
     "Unknown"
 )
-```
+
 
 ### Income Segments
 
@@ -198,18 +187,17 @@ SWITCH(
 * **Medium:** 35,000–69,999
 * **High:** ≥ 70,000
 
----
 
-## 3. Revenue
+ 3. Revenue
 
 A calculated revenue column was created by combining annual fees, transaction amount, and interest earned:
 
-```DAX
+DAX
 Revenue =
     cc_details[Annual_Fees]
     + cc_details[Total_Trans_Amt]
     + cc_details[Interest_Earned]
-```
+
 
 This metric is used to analyze revenue across:
 
@@ -223,59 +211,38 @@ This metric is used to analyze revenue across:
 * State
 * Quarterly trends
 
----
 
-## 4. Delinquent Customers
 
-```DAX
+ 4. Delinquent Customers
+
+DAX
 Delinquent Customers =
 CALCULATE(
     DISTINCTCOUNT(cc_details[Client_Num]),
     cc_details[Delinquent_Acc] = "1"
 )
-```
 
----
 
-## 5. Total Customers
+ 5. Total Customers
 
-```DAX
+DAX
 Total Customers =
 DISTINCTCOUNT(cc_details[Client_Num])
-```
 
----
 
-## 6. Delinquency Rate
+6. Delinquency Rate
 
-```DAX
+DAX
 Delinquency Rate =
 DIVIDE(
     [Delinquent Customers],
     [Total Customers],
     0
 )
-```
+
 
 The delinquency rate was used to identify potentially higher-risk customer segments by **Age Group** and **Card Category**.
 
-```
-
-### One important distinction for your README
-
-Your first three are **calculated columns**, while the last three are **measures**.
-
-| DAX | Type | Purpose |
-|---|---|---|
-| `AgeGroup` | Calculated Column | Customer age segmentation |
-| `Income Group` | Calculated Column | Income segmentation |
-| `Revenue` | Calculated Column | Row-level revenue calculation |
-| `Delinquent Customers` | Measure | Count of delinquent customers |
-| `Total Customers` | Measure | Unique customer count |
-| `Delinquency Rate` | Measure | Overall/segment delinquency rate |
-
-This distinction makes the README look more technically accurate and professional.
-```
 
 # 🔍 Key Business Insights
 
@@ -399,13 +366,11 @@ Recommendations
 
 ### Credit Card Transaction Report
 
-![Credit Card Transaction Report](image/credit_card_transaction_report.png)
+![Credit Card Transaction Report](./image/credit-card-transaction-report.png)
 
 ### Credit Card Customer Report
 
-![Credit Card Customer Report](image/credit_card_customer_report.png)
-> Dashboard screenshots can be added to the repository for a visual preview.
-
+![Credit Card Customer Report](./image/credit-card-customer-report.png)
 ---
 
 # 👨‍💻 Author
