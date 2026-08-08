@@ -139,9 +139,93 @@ This dashboard focuses on customer demographics and behavior.
 
 A key part of the project is analyzing customer delinquency.
 
-### DAX Measures
+Yes. Since these are part of the actual Power BI work, they should be included in the **DAX Measures & Calculated Columns** section of your README. I'd update that section professionally like this:
 
-#### Delinquent Customers
+````markdown
+# 📐 DAX Calculations
+
+The project uses DAX to create calculated columns and measures for customer segmentation, revenue analysis, and delinquency analysis.
+
+## 1. Age Group
+
+A calculated column was created to segment customers based on age:
+
+```DAX
+AgeGroup =
+SWITCH(
+    TRUE(),
+    cust_detail[Customer_Age] < 30, "20-30",
+    cust_detail[Customer_Age] >= 30 &&
+        cust_detail[Customer_Age] < 40, "30-40",
+    cust_detail[Customer_Age] >= 40 &&
+        cust_detail[Customer_Age] < 50, "40-50",
+    cust_detail[Customer_Age] >= 50 &&
+        cust_detail[Customer_Age] < 60, "50-60",
+    cust_detail[Customer_Age] >= 60, "60+",
+    "Unknown"
+)
+````
+
+### Age Groups
+
+* 20–30
+* 30–40
+* 40–50
+* 50–60
+* 60+
+
+---
+
+## 2. Income Group
+
+Customers were segmented into income groups to compare revenue and customer behavior across different income levels.
+
+```DAX
+Income Group =
+SWITCH(
+    TRUE(),
+    cust_detail[Income] < 35000, "Low",
+    cust_detail[Income] >= 35000 &&
+        cust_detail[Income] < 70000, "Medium",
+    cust_detail[Income] >= 70000, "High",
+    "Unknown"
+)
+```
+
+### Income Segments
+
+* **Low:** < 35,000
+* **Medium:** 35,000–69,999
+* **High:** ≥ 70,000
+
+---
+
+## 3. Revenue
+
+A calculated revenue column was created by combining annual fees, transaction amount, and interest earned:
+
+```DAX
+Revenue =
+    cc_details[Annual_Fees]
+    + cc_details[Total_Trans_Amt]
+    + cc_details[Interest_Earned]
+```
+
+This metric is used to analyze revenue across:
+
+* Card Category
+* Age Group
+* Income Group
+* Customer Job
+* Education
+* Expenditure Type
+* Payment Method
+* State
+* Quarterly trends
+
+---
+
+## 4. Delinquent Customers
 
 ```DAX
 Delinquent Customers =
@@ -151,14 +235,18 @@ CALCULATE(
 )
 ```
 
-#### Total Customers
+---
+
+## 5. Total Customers
 
 ```DAX
 Total Customers =
 DISTINCTCOUNT(cc_details[Client_Num])
 ```
 
-#### Delinquency Rate
+---
+
+## 6. Delinquency Rate
 
 ```DAX
 Delinquency Rate =
@@ -169,9 +257,25 @@ DIVIDE(
 )
 ```
 
-The delinquency rate is analyzed across **Age Group** and **Card Category** to identify potentially higher-risk customer segments.
+The delinquency rate was used to identify potentially higher-risk customer segments by **Age Group** and **Card Category**.
 
----
+```
+
+### One important distinction for your README
+
+Your first three are **calculated columns**, while the last three are **measures**.
+
+| DAX | Type | Purpose |
+|---|---|---|
+| `AgeGroup` | Calculated Column | Customer age segmentation |
+| `Income Group` | Calculated Column | Income segmentation |
+| `Revenue` | Calculated Column | Row-level revenue calculation |
+| `Delinquent Customers` | Measure | Count of delinquent customers |
+| `Total Customers` | Measure | Unique customer count |
+| `Delinquency Rate` | Measure | Overall/segment delinquency rate |
+
+This distinction makes the README look more technically accurate and professional.
+```
 
 # 🔍 Key Business Insights
 
@@ -295,12 +399,11 @@ Recommendations
 
 ### Credit Card Transaction Report
 
-![Credit Card Transaction Report](./Credit%20Card%20Transaction%20Report.pdf)
+![Credit Card Transaction Report](image/credit_card_transaction_report.png)
 
 ### Credit Card Customer Report
 
-![Credit Card Customer Report](./Credit%20Card%20Customer%20Report.pdf)
-
+![Credit Card Customer Report](image/credit_card_customer_report.png)
 > Dashboard screenshots can be added to the repository for a visual preview.
 
 ---
@@ -320,38 +423,4 @@ B.Sc. Computer Science Graduate | Aspiring Data Analyst
 
 This project demonstrates an end-to-end approach to data analytics — from **raw data and SQL analysis to Power BI visualization and actionable business recommendations**.
 
-````
 
-### ⚠️ One change I strongly recommend
-
-Don't use the PDF files directly inside:
-
-```markdown
-![Dashboard](./Credit%20Card%20Transaction%20Report.pdf)
-````
-
-GitHub's image preview won't work properly for a PDF in an image tag.
-
-Instead, create a **`screenshots`** folder and upload PNG/JPG screenshots of your two dashboards:
-
-```text
-📂 screenshots
-   ├── credit-card-transaction-report.png
-   └── credit-card-customer-report.png
-```
-
-Then your README can show them properly:
-
-```markdown
-## 📸 Dashboard Preview
-
-### Credit Card Transaction Report
-
-![Credit Card Transaction Report](./screenshots/credit-card-transaction-report.png)
-
-### Credit Card Customer Report
-
-![Credit Card Customer Report](./screenshots/credit-card-customer-report.png)
-```
-
-**This will make your GitHub repository look much more professional to a recruiter.**
